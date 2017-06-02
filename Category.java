@@ -21,11 +21,10 @@ import java.util.concurrent.TimeUnit;
 
 
 public class Category {
-    protected static FirefoxDriver driver;
+    protected static AndroidDriver driver;
     static WebElement element;
 
     @BeforeClass
-
     public static void openApp() {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -37,12 +36,13 @@ public class Category {
         capabilities.setCapability("newCommandTimeout", "180");
         try {
             driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-
         } catch (MalformedURLException e) {
 
             e.printStackTrace();
         }
     }
+
+
 
     //TCID home_1
 

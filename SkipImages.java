@@ -21,7 +21,7 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class SkipImages extends Login {
-    protected static FirefoxDriver driver;
+    protected static AndroidDriver driver;
     WebElement element;
 
     @BeforeClass
