@@ -23,8 +23,8 @@ import java.util.concurrent.TimeUnit;
 
 
 
-public class WrongNumber extends Login{
-    protected static FirefoxDriver driver;
+public class WrongNumber extends Login {
+    protected static AndroidDriver driver;
     WebElement element;
 
     @BeforeClass
@@ -37,13 +37,21 @@ public class WrongNumber extends Login{
         capabilities.setCapability("app", "/Users/piyush/Desktop/app-test-apk.apk");
         capabilities.setCapability("browserName", "");
         capabilities.setCapability("newCommandTimeout", "180");
+
+
         try {
-           driver=new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+            driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         } catch (MalformedURLException e) {
 
             e.printStackTrace();
         }
     }
+
+
+
+
+
+
 
 
 //TCID wrong_1
